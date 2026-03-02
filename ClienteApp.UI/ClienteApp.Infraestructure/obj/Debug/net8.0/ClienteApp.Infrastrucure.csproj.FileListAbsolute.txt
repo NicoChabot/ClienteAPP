@@ -1,0 +1,16 @@
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\obj\Debug\net8.0\ClienteApp.Infrastrucure.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\obj\Debug\net8.0\ClienteApp.Infrastrucure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\obj\Debug\net8.0\ClienteApp.Infrastrucure.AssemblyInfoInputs.cache
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\obj\Debug\net8.0\ClienteApp.Infrastrucure.AssemblyInfo.cs
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\obj\Debug\net8.0\ClienteApp.Infrastrucure.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\obj\Debug\net8.0\ClienteApp.Infrastrucure.sourcelink.json
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\bin\Debug\net8.0\ClienteApp.Infrastrucure.deps.json
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\bin\Debug\net8.0\ClienteApp.Infrastrucure.dll
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\bin\Debug\net8.0\ClienteApp.Infrastrucure.pdb
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\bin\Debug\net8.0\ClienteApp.Domain.dll
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\bin\Debug\net8.0\ClienteApp.Domain.pdb
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\obj\Debug\net8.0\ClienteA.5A6BC845.Up2Date
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\obj\Debug\net8.0\ClienteApp.Infrastrucure.dll
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\obj\Debug\net8.0\refint\ClienteApp.Infrastrucure.dll
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\obj\Debug\net8.0\ClienteApp.Infrastrucure.pdb
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Infraestructure\obj\Debug\net8.0\ref\ClienteApp.Infrastrucure.dll

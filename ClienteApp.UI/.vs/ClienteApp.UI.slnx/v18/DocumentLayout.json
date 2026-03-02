@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\danie\\OneDrive\\Documentos\\Nico\\ClienteAPP\\ClienteApp.UI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16FAE91C-B65D-AE74-F339-A5CACBF2E7E0}|ClienteApp.UI\\ClienteApp.UI.csproj|c:\\users\\danie\\onedrive\\documentos\\nico\\clienteapp\\clienteapp.ui\\clienteapp.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16FAE91C-B65D-AE74-F339-A5CACBF2E7E0}|ClienteApp.UI\\ClienteApp.UI.csproj|solutionrelative:clienteapp.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16FAE91C-B65D-AE74-F339-A5CACBF2E7E0}|ClienteApp.UI\\ClienteApp.UI.csproj|c:\\users\\danie\\onedrive\\documentos\\nico\\clienteapp\\clienteapp.ui\\clienteapp.ui\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16FAE91C-B65D-AE74-F339-A5CACBF2E7E0}|ClienteApp.UI\\ClienteApp.UI.csproj|solutionrelative:clienteapp.ui\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DA57B18-D4E7-9884-F23E-32B906BD438F}|ClienteApp.Infraestructure\\ClienteApp.Infrastrucure.csproj|c:\\users\\danie\\onedrive\\documentos\\nico\\clienteapp\\clienteapp.ui\\clienteapp.infraestructure\\data\\dbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DA57B18-D4E7-9884-F23E-32B906BD438F}|ClienteApp.Infraestructure\\ClienteApp.Infrastrucure.csproj|solutionrelative:clienteapp.infraestructure\\data\\dbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DA57B18-D4E7-9884-F23E-32B906BD438F}|ClienteApp.Infraestructure\\ClienteApp.Infrastrucure.csproj|c:\\users\\danie\\onedrive\\documentos\\nico\\clienteapp\\clienteapp.ui\\clienteapp.infraestructure\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DA57B18-D4E7-9884-F23E-32B906BD438F}|ClienteApp.Infraestructure\\ClienteApp.Infrastrucure.csproj|solutionrelative:clienteapp.infraestructure\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\Nico\\ClienteAPP\\ClienteApp.UI\\ClienteApp.UI\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "ClienteApp.UI\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\Nico\\ClienteAPP\\ClienteApp.UI\\ClienteApp.UI\\Forms\\MainForm.cs",
+              "RelativeToolTip": "ClienteApp.UI\\Forms\\MainForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:56:01.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\Nico\\ClienteAPP\\ClienteApp.UI\\ClienteApp.UI\\Program.cs",
+              "RelativeDocumentMoniker": "ClienteApp.UI\\Program.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\Nico\\ClienteAPP\\ClienteApp.UI\\ClienteApp.UI\\Program.cs",
+              "RelativeToolTip": "ClienteApp.UI\\Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:56:55.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DBSettings.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\Nico\\ClienteAPP\\ClienteApp.UI\\ClienteApp.Infraestructure\\Data\\DBSettings.cs",
+              "RelativeDocumentMoniker": "ClienteApp.Infraestructure\\Data\\DBSettings.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\Nico\\ClienteAPP\\ClienteApp.UI\\ClienteApp.Infraestructure\\Data\\DBSettings.cs",
+              "RelativeToolTip": "ClienteApp.Infraestructure\\Data\\DBSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:32:56.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\Nico\\ClienteAPP\\ClienteApp.UI\\ClienteApp.Infraestructure\\Repositories\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "ClienteApp.Infraestructure\\Repositories\\ClienteRepository.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\Nico\\ClienteAPP\\ClienteApp.UI\\ClienteApp.Infraestructure\\Repositories\\ClienteRepository.cs",
+              "RelativeToolTip": "ClienteApp.Infraestructure\\Repositories\\ClienteRepository.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:18:38.591Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

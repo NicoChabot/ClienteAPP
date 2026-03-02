@@ -1,0 +1,12 @@
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Domain\bin\Debug\net8.0\ClienteApp.Domain.deps.json
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Domain\bin\Debug\net8.0\ClienteApp.Domain.dll
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Domain\bin\Debug\net8.0\ClienteApp.Domain.pdb
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Domain\obj\Debug\net8.0\ClienteApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Domain\obj\Debug\net8.0\ClienteApp.Domain.AssemblyInfoInputs.cache
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Domain\obj\Debug\net8.0\ClienteApp.Domain.AssemblyInfo.cs
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Domain\obj\Debug\net8.0\ClienteApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Domain\obj\Debug\net8.0\ClienteApp.Domain.sourcelink.json
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Domain\obj\Debug\net8.0\ClienteApp.Domain.dll
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Domain\obj\Debug\net8.0\refint\ClienteApp.Domain.dll
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Domain\obj\Debug\net8.0\ClienteApp.Domain.pdb
+C:\Users\danie\OneDrive\Documentos\Nico\ClienteAPP\ClienteApp.UI\ClienteApp.Domain\obj\Debug\net8.0\ref\ClienteApp.Domain.dll
