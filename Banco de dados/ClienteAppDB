@@ -1,60 +1,145 @@
-CREATE DATABASE ClienteAppDB;
-GO
+SET NOCOUNT ON;
 
-CREATE LOGIN cliente_user WITH PASSWORD = 'SenhaForte@123';
-GO
+IF OBJECT_ID('dbo.CIDADE', 'U') IS NOT NULL DROP TABLE dbo.CIDADE;
+IF OBJECT_ID('dbo.CLIENTE', 'U') IS NOT NULL DROP TABLE dbo.CLIENTE;
+IF OBJECT_ID('dbo.ESTADO', 'U') IS NOT NULL DROP TABLE dbo.ESTADO;
 
-USE ClienteAppDB;
-GO
-
-CREATE USER cliente_user FOR LOGIN cliente_user;
-GO
-
-ALTER ROLE db_owner ADD MEMBER cliente_user;
-GO
-
-SELECT @@VERSION;
-GO
-
-CREATE TABLE ESTADO (
-    ID INT PRIMARY KEY IDENTITY,
-    NOME VARCHAR(50),
-    UF CHAR(2)
+-- ESTADO
+CREATE TABLE dbo.ESTADO
+(
+    ID   INT IDENTITY(1,1) PRIMARY KEY,
+    NOME VARCHAR(50) NOT NULL,
+    UF   CHAR(2) NOT NULL
 );
 
-CREATE TABLE CIDADE (
-    ID INT PRIMARY KEY IDENTITY,
-    NOME VARCHAR(50),
-    ESTADOID INT FOREIGN KEY REFERENCES ESTADO(ID)
+INSERT INTO dbo.ESTADO (NOME, UF)
+VALUES
+('Minas Gerais','MG'),
+('São Paulo','SP'),
+('Rio de Janeiro','RJ'),
+('Bahia','BA');
+
+-- CIDADE
+CREATE TABLE dbo.CIDADE
+(
+    ID       INT IDENTITY(1,1) PRIMARY KEY,
+    NOME     VARCHAR(50) NOT NULL,
+    ESTADOID INT NOT NULL,
+    CONSTRAINT FK_CIDADE_ESTADO FOREIGN KEY (ESTADOID) REFERENCES dbo.ESTADO(ID)
 );
 
-CREATE TABLE CLIENTE (
-    ID INT PRIMARY KEY IDENTITY,
-    NOME VARCHAR(80),
-    CEP CHAR(8),
-    CPF_CNPJ VARCHAR(14),
-    ENDERECO VARCHAR(100),
-    NUMERO VARCHAR(20),
-    COMPLEMENTO VARCHAR(60),
-    BAIRRO VARCHAR(100),
-    CIDADE INT FOREIGN KEY REFERENCES CIDADE(ID),
-    DATANASCIMENTO DATE
+DECLARE @MG INT = (SELECT ID FROM dbo.ESTADO WHERE UF='MG');
+DECLARE @SP INT = (SELECT ID FROM dbo.ESTADO WHERE UF='SP');
+DECLARE @RJ INT = (SELECT ID FROM dbo.ESTADO WHERE UF='RJ');
+DECLARE @BA INT = (SELECT ID FROM dbo.ESTADO WHERE UF='BA');
+
+INSERT INTO dbo.CIDADE (NOME, ESTADOID)
+VALUES
+('Belo Horizonte', @MG),
+('Contagem', @MG),
+('Uberlândia', @MG),
+('São Paulo', @SP),
+('Campinas', @SP),
+('Santos', @SP),
+('Rio de Janeiro', @RJ),
+('Niterói', @RJ),
+('Petrópolis', @RJ),
+('Salvador', @BA),
+('Feira de Santana', @BA),
+('Ilhéus', @BA);
+
+-- CLIENTE
+CREATE TABLE dbo.CLIENTE
+(
+    ID             INT IDENTITY(1,1) PRIMARY KEY,
+    NOME           VARCHAR(80)  NOT NULL,
+    CEP            CHAR(8)      NULL,
+    CPF_CNPJ       VARCHAR(14)  NOT NULL,
+    ENDERECO       VARCHAR(100) NOT NULL,
+    NUMERO         VARCHAR(20)  NULL,
+    COMPLEMENTO    VARCHAR(60)  NULL,
+    BAIRRO         VARCHAR(100) NULL,
+    CIDADE         INT          NOT NULL,
+    DATANASCIMENTO DATE         NULL,
+    CONSTRAINT FK_CLIENTE_CIDADE FOREIGN KEY (CIDADE) REFERENCES dbo.CIDADE(ID)
 );
 
-CREATE INDEX IX_CLIENTE_NOME ON CLIENTE(NOME);
-CREATE INDEX IX_CLIENTE_CPF_CNPJ ON CLIENTE(CPF_CNPJ);
-CREATE INDEX IX_CLIENTE_CEP ON CLIENTE(CEP);
+;WITH
+PrimeiroNome AS
+(
+    SELECT v.Nome
+    FROM (VALUES
+    ('Carlos'),('Maria'),('João'),('Ana'),('Lucas'),('Fernanda'),('Marcos'),('Patricia'),('Ricardo'),('Juliana'),
+    ('Bruno'),('Camila'),('Felipe'),('Aline'),('Gustavo'),('Larissa'),('Rodrigo'),('Beatriz'),('Diego'),('Mariana'),
+    ('Rafael'),('Carolina'),('Tiago'),('Leticia'),('Andre'),('Isabela'),('Eduardo'),('Gabriela'),('Vinicius'),('Amanda'),
+    ('Daniel'),('Renata'),('Henrique'),('Bianca'),('Pedro'),('Clara'),('Matheus'),('Luana'),('Leonardo'),('Sofia'),
+    ('Paulo'),('Helena'),('Vitor'),('Laura'),('Caio'),('Jéssica'),('Igor'),('Natália'),('Samuel'),('Elaine')
+    ) v(Nome)
+),
+Sobrenome AS
+(
+    SELECT v.Sobrenome
+    FROM (VALUES
+    ('Silva'),('Souza'),('Oliveira'),('Santos'),('Pereira'),('Lima'),('Carvalho'),('Ferreira'),('Almeida'),('Gomes'),
+    ('Ribeiro'),('Costa'),('Martins'),('Araújo'),('Barbosa'),('Rocha'),('Dias'),('Teixeira'),('Moreira'),('Cardoso')
+    ) v(Sobrenome)
+),
+Nomes AS
+(
+    SELECT ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS NomeId,
+           CONCAT(p.Nome, ' ', s.Sobrenome) AS NomeCompleto
+    FROM PrimeiroNome p
+    CROSS JOIN Sobrenome s
+),
+Numeros AS
+(
+    SELECT TOP (25000)
+        ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS Seq
+    FROM sys.all_objects a
+    CROSS JOIN sys.all_objects b
+)
+INSERT INTO dbo.CLIENTE
+(
+    NOME, CEP, CPF_CNPJ, ENDERECO, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, DATANASCIMENTO
+)
+SELECT
+    (SELECT n.NomeCompleto FROM Nomes n WHERE n.NomeId = (ABS(CHECKSUM(NEWID())) % 1000) + 1) + ' ' + CAST(Seq AS VARCHAR(10)),
+    NULL,
+    RIGHT('00000000000' + CAST(ABS(CHECKSUM(NEWID())) % 100000000000 AS VARCHAR(11)), 11),
+    CASE ABS(CHECKSUM(NEWID())) % 10
+        WHEN 0 THEN 'Rua Alfa'
+        WHEN 1 THEN 'Avenida Brasil'
+        WHEN 2 THEN 'Rua das Flores'
+        WHEN 3 THEN 'Avenida Central'
+        WHEN 4 THEN 'Rua do Comércio'
+        WHEN 5 THEN 'Rua Primavera'
+        WHEN 6 THEN 'Avenida Paulista'
+        WHEN 7 THEN 'Rua Minas Gerais'
+        WHEN 8 THEN 'Avenida Atlântica'
+        ELSE 'Rua Bahia'
+    END,
+    CAST((ABS(CHECKSUM(NEWID())) % 9999) + 1 AS VARCHAR(20)),
+    CASE WHEN ABS(CHECKSUM(NEWID())) % 5 = 0 THEN 'Apto ' + CAST((ABS(CHECKSUM(NEWID())) % 400) + 1 AS VARCHAR(10)) ELSE NULL END,
+    CASE ABS(CHECKSUM(NEWID())) % 6
+        WHEN 0 THEN 'Centro'
+        WHEN 1 THEN 'Industrial'
+        WHEN 2 THEN 'Jardins'
+        WHEN 3 THEN 'Santa Maria'
+        WHEN 4 THEN 'Nova Esperança'
+        ELSE 'Vila Verde'
+    END,
+    (SELECT TOP 1 c.ID FROM dbo.CIDADE c ORDER BY NEWID()),
+    DATEADD(
+        DAY, - (ABS(CHECKSUM(NEWID())) % 365),
+        DATEADD(
+            YEAR, - (18 + (ABS(CHECKSUM(NEWID())) % 81)),
+            CAST(GETDATE() AS DATE)
+        )
+    );
 
-INSERT INTO CIDADE (NOME, ESTADOID) VALUES
-('Belo Horizonte', 1),
-('Uberlândia', 1),
-('São Paulo', 2),
-('Campinas', 2),
-('Rio de Janeiro', 3),
-('Salvador', 4);
+SELECT COUNT(*) AS TotalClientes FROM dbo.CLIENTE;
 
-INSERT INTO ESTADO (NOME, UF) VALUES
-('Minas Gerais', 'MG'),
-('São Paulo', 'SP'),
-('Rio de Janeiro', 'RJ'),
-('Bahia', 'BA');
+SELECT
+    MIN(DATEDIFF(YEAR, DATANASCIMENTO, CAST(GETDATE() AS DATE))) AS IdadeMin,
+    MAX(DATEDIFF(YEAR, DATANASCIMENTO, CAST(GETDATE() AS DATE))) AS IdadeMax
+FROM dbo.CLIENTE;
